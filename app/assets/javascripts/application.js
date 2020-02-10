@@ -13,3 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+const @list  = document.querySelectorAll('#list li');
+
+@list.forEach((li) => {
+  li.addEventListener('click', (event) => {
+    console.log(li.innerText);
+  })
+})

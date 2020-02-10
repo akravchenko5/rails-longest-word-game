@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>New game</h1>
+
+<ul id="list">
+  <% @letters.each do |letter| %>
+    <li><%= letter %></li>
+  <% end %>
+</ul>
+
+<form action="/score" method="post" class="form">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="text" placeholder="text" id="text-imput">
+  <input type="hidden" id="letters" name="letters" value="<%=@letters.join%>">
+  <input type="hidden" id="start_time" name="start_time" value="<%=@start_time%>">
+  <input type="submit" id="button">
+</form>
+
+
+</div>
+
+
+
